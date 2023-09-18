@@ -1,5 +1,13 @@
+import { useState } from "react";
 import logo from "../../assets/logo.png";
+import "./header.css";
+
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <nav className="m-2">
       <div className="container mx-auto flex justify-between items-center">
@@ -9,13 +17,41 @@ const Header = () => {
             <img src={logo} alt="logo" className="w-50 h-50" />
           </a>
         </div>
+        {/**Menu Icon */}
+        <div className="lg:hidden cursor-pointer" onClick={toggleMenu}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </div>
         {/**Menu */}
-        <ul className="flex space-x-8">
+        <ul className={`${menuOpen ? "lg:flex" : "hidden"} lg:flex space-x-8`}>
           {/**Menu Items */}
           <li>
             <a
               href="faq"
-              className="hover:border-t-2 hover:border-gray-500"
+              className={`${
+                menuOpen ? "block" : "hidden"
+              } lg:inline-block hover:border-t-2 hover:border-gray-500 px-2 py-1`}
               style={{ fontSize: 12, fontWeight: 600 }}
             >
               FAQs
@@ -24,7 +60,9 @@ const Header = () => {
           <li>
             <a
               href="how-it-works"
-              className="hover:border-t-2 hover:border-gray-500"
+              className={`${
+                menuOpen ? "block" : "hidden"
+              } lg:inline-block hover:border-t-2 hover:border-gray-500 px-2 py-1`}
               style={{ fontSize: 12, fontWeight: 600 }}
             >
               How it Works
@@ -33,7 +71,9 @@ const Header = () => {
           <li>
             <a
               href="pricing"
-              className="hover:border-t-2 hover:border-gray-500"
+              className={`${
+                menuOpen ? "block" : "hidden"
+              } lg:inline-block hover:border-t-2 hover:border-gray-500 px-2 py-1`}
               style={{ fontSize: 12, fontWeight: 600 }}
             >
               Pricing
@@ -42,7 +82,9 @@ const Header = () => {
           <li>
             <a
               href="reviews"
-              className="hover:border-t-2 hover:border-gray-500"
+              className={`${
+                menuOpen ? "block" : "hidden"
+              } lg:inline-block hover:border-t-2 hover:border-gray-500 px-2 py-1`}
               style={{ fontSize: 12, fontWeight: 600 }}
             >
               Reviews
@@ -51,7 +93,9 @@ const Header = () => {
           <li>
             <a
               href="contact-us"
-              className="text-sm hover:border-t-2 hover:border-gray-500"
+              className={`${
+                menuOpen ? "block" : "hidden"
+              } lg:inline-block hover:border-t-2 hover:border-gray-500 px-2 py-1`}
               style={{ fontSize: 12, fontWeight: 600 }}
             >
               Contact us
@@ -60,7 +104,9 @@ const Header = () => {
           <li>
             <a
               href="order"
-              className="text-red-500 px-2 py-1"
+              className={`${
+                menuOpen ? "block" : "hidden"
+              }text-red-500 px-2 py-1`}
               style={{
                 fontSize: 12,
                 fontWeight: 600,
@@ -74,11 +120,10 @@ const Header = () => {
           <li>
             <a
               href="login"
-              className="hover:border-t-2 hover:border-gray-500 p-2"
-              style={{
-                fontSize: 12,
-                fontWeight: 600,
-              }}
+              className={`${
+                menuOpen ? "block" : "hidden"
+              } lg:inline-block hover:border-t-2 hover:border-gray-500 px-2 py-1`}
+              style={{ fontSize: 12, fontWeight: 600 }}
             >
               LOGIN
             </a>
