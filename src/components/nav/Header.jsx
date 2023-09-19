@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../assets/logo.png";
+//import logo from "../../assets/logo.png";
 import "./header.css";
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
         {/**Logo */}
         <div className=" text-xl font-bold">
           <a href="/">
-            <img src={logo} alt="logo" className="w-50 h-50" />
+            <img src="/logo.png" alt="logo" className="w-40 h-45" />
           </a>
         </div>
         {/**Menu Icon */}
