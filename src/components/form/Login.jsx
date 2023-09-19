@@ -16,11 +16,14 @@ const Login = () => {
     console.log("Login Data:", formData);
   };
   return (
-    <div className="container mx-auto p-4">
+    <div className="mx-auto max-w-md">
       <form onSubmit={handleSubmit} className="w-full mx-auto">
         {/* Email Address */}
-        <div className="mb-4 flex items-center">
-          <label htmlFor="email" className="w-1/4 pr-2">
+        <div className="mb-4">
+          <label
+            htmlFor="email"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Email
           </label>
           <input
@@ -29,15 +32,18 @@ const Login = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="border p-2 rounded w-full flex-grow"
+            className="border p-2 rounded w-full focus:outline-none focus:ring focus:border-blue-300"
             placeholder="Email"
             required
           />
         </div>
 
         {/* Password */}
-        <div className="mb-4 flex items-center">
-          <label htmlFor="password" className="w-1/4 pr-2">
+        <div className="mb-4">
+          <label
+            htmlFor="password"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Password
           </label>
           <input
@@ -46,16 +52,17 @@ const Login = () => {
             name="password"
             value={formData.password}
             onChange={handleChange}
-            className="border p-2 rounded w-full flex-grow"
+            className="border p-2 rounded w-full focus:outline-none focus:ring focus:border-blue-300"
             required
+            placeholder="Password"
           />
         </div>
 
         {/* Login Button */}
-        <div className="mb-4">
+        <div className="mb-4 w-full">
           <button
             type="submit"
-            className="bg-yellow-500 text-black p-2 rounded hover:bg-yellow-600 transition duration-300 w-1/2"
+            className="bg-yellow-500 text-black p-2 rounded hover:bg-yellow-600 transition duration-300 w-full text-sm"
           >
             Login
           </button>

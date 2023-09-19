@@ -8,9 +8,12 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const style = {
+    "@media (max-width: 640px)": { width: "100%" },
+  };
   return (
-    <nav className="m-2">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="p-2" style={style}>
+      <div className="flex justify-between items-center sm:w-full">
         {/**Logo */}
         <div className=" text-xl font-bold">
           <a href="/">

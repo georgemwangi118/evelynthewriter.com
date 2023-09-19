@@ -13,14 +13,14 @@ const Auth = () => {
   };
   return (
     <div className="container mx-auto">
-      <h1 style={{ color: "#32415b", fontSize: 24, fontWeight: "bold" }}>
+      <h1 style={{ color: "#32415b" }} className="text-2l font-bold">
         Sign up/Login
       </h1>
-      <div className="w-1/2 flex justify-between h-5">
-        <button onClick={signUpDisplay} className="hover:bg-gray-200">
+      <div className="">
+        <button onClick={signUpDisplay} className="hover:bg-gray-200 m-2">
           New Customer
         </button>
-        <button onClick={loginDisplay} className="hover:bg-gray-200">
+        <button onClick={loginDisplay} className="hover:bg-gray-200 m-2">
           Existing customer
         </button>
       </div>

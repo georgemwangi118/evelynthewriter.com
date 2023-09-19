@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Counter = () => {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   const increment = () => {
     setCount(count + 1);
@@ -14,7 +14,7 @@ const Counter = () => {
   };
 
   return (
-    <div className="flex items-center justify-center py-2 px-4">
+    <div className="flex items-center justify-center">
       <button
         onClick={decrement}
         className="border border-gray-300 rounded-lg px-3 py-1  mr-2"

@@ -9,8 +9,8 @@ const DateTimePicker = () => {
     setSelectedDate(date);
   };
   return (
-    <div className="container mx-auto p-4 flex">
-      <h1 className="text-3xl font-semibold mb-4">Deadline</h1>
+    <div className="flex flex-col lg:flex-row">
+      <h1 className="text-sm font-semibold">Deadline</h1>
 
       {/* Display Current Date and Time */}
       {/* <div className="mb-4">

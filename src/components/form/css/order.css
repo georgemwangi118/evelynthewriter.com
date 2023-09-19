@@ -1,0 +1,9 @@
+.header-text h1 {
+  color: "#32415b";
+}
+.type-of-paper {
+  display: flex;
+}
+.type-of-paper select {
+  width: "100%";
+}

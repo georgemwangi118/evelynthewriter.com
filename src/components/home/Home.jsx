@@ -19,8 +19,9 @@ const Home = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
-    <div className="px-10 m-3">
+    <div className="container">
       <Header />
       <div
         className="container mx-auto p-4"
